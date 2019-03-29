@@ -3,14 +3,13 @@ const Joi = require('joi')
 module.exports = {
   register (req, res, next) {
     const schema = {
-      email: Joi.string().email,
+      email: Joi.string().email(),
       // Choosing alphanumeric passwords that are 8-32 chars long
-      password: Joi.string.regex(
-        new RegExp('^[a-zA-Z0-9]{8-32}$')
+      password: Joi.string().regex(
+        new RegExp('^[a-zA-Z0-9]{8,32}$')
       )
     }
     const { error } = Joi.validate(req.body, schema)
-
     if (error) {
       // We will find out what exactly failed
       switch (error.details[0].context.key) {
