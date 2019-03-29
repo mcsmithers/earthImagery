@@ -1,4 +1,4 @@
-console.log('It lives!  And on port 8081')
+console.log('It lives!')
 
 const express = require('express')
 const bodyParser = require('body-parser')

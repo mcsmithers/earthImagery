@@ -1,16 +1,14 @@
 <template>
-  <div id="app">
+  <!-- <div id="app"> -->
     <v-app>
       <page-header/>
       <v-content>
-
           <v-container>
             <router-view/>
           </v-container>
-          
       </v-content>
     </v-app>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -31,9 +29,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.input-group--text-field input{
-  border-bottom: 1px solid black;
 }
 </style>
