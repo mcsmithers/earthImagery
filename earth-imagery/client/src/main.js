@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Register from './components/Register'
+// import Register from './components/Register'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
@@ -15,6 +15,6 @@ Vue.use(Vuetify)
 new Vue({
   el: '#app',
   router,
-  components: { App, Register },
+  components: { App },
   template: '<App/>'
 })

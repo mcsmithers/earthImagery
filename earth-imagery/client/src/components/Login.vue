@@ -6,6 +6,7 @@
         <v-toolbar-title>Login</v-toolbar-title>
       </v-toolbar>
       <div class="pl-4 pr-4 pb-2 Login">
+        <form name="earth-imagery-form" autocomplete="off">
         <v-flex xs12 sm6 md3>
           <v-text-field
             placeholder="Email"
@@ -17,13 +18,15 @@
           <v-text-field
             v-model="password"
             placeholder="Password"
+            type="password"
+            autocomplete="new-password"
           ></v-text-field>
         </v-flex>
-
+        </form>
         <br>
         <div v-html="error" class="error" />
         <br>
-        <v-btn flat dark class="cyan" @click="login">Login</v-btn>
+        <v-btn flat dark class="cyan" v-on:click="login">Login</v-btn>
       </div>
     </div>
   </v-flex>
