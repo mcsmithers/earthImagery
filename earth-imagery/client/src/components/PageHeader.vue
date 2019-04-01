@@ -1,7 +1,7 @@
 <template>
   <v-toolbar fixed class="cyan" dark>
     <v-toolbar-title class="mr-4">
-      <span class="home" v-on:click="navigateTo({name:'home'})">
+      <span class="home" :to="{name: 'home'}">
         Earth Imagery
         </span>
       </v-toolbar-title>
