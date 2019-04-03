@@ -7,21 +7,21 @@
       </v-toolbar>
       <div class="pl-4 pr-4 pb-2 Login">
         <form name="earth-imagery-form" autocomplete="off">
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            placeholder="Email"
-            v-model="email"
-          ></v-text-field>
-        </v-flex>
-        <br/>
-        <v-flex xs12 sm6 md3>
-          <v-text-field
-            v-model="password"
-            placeholder="Password"
-            type="password"
-            autocomplete="new-password"
-          ></v-text-field>
-        </v-flex>
+          <v-flex xs12 sm6 md3>
+            <v-text-field
+              placeholder="Email"
+              v-model="email"
+            ></v-text-field>
+          </v-flex>
+          <br/>
+          <v-flex xs12 sm6 md3>
+            <v-text-field
+              v-model="password"
+              placeholder="Password"
+              type="password"
+              autocomplete="new-password"
+            ></v-text-field>
+          </v-flex>
         </form>
         <br>
         <div v-html="error" class="error" />

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Register from './components/Register.vue'
 import Login from './components/Login.vue'
+import Earth from './components/Earth.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/earth',
+      name: 'earth',
+      component: Earth
     }
   ]
 })
