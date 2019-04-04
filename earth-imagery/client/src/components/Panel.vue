@@ -1,28 +1,15 @@
 <template>
 <v-layout column>
-  <v-flex xs6 offset-xs3>
+  <v-flex>
     <div class="white elevation-2">
       <v-toolbar flat dense class="cyan" dark>
         <v-toolbar-title>{{title}}</v-toolbar-title>
         </v-toolbar>
-      <div class="pl-4 pr-4 pt-2 pb-2">
-        <form name="earth-imagery-form" autocomplete="off">
-          <v-flex xs12 sm6 md3>
-            <v-text-field
-              placeholder="Email"
-              v-model="email"
-            ></v-text-field>
-          </v-flex>
-          <br/>
-          <v-flex xs12 sm6 md3>
-            <v-text-field
-              v-model="password"
-              placeholder="Password"
-              type="password"
-              autocomplete="new-password"
-            ></v-text-field>
-          </v-flex>
-        </form>
+      <div class="pl-12 pr-12 pt-6 pb-6">
+        <div slot="image"></div>
+        <div slot="image-info">
+            <ImageTable/>
+        </div>
       </div>
     </div>
   </v-flex>
@@ -30,16 +17,18 @@
 </template>
 
 <script>
+import ImageTable from '@/components/ImageTable'
 export default {
-
+  data () {
+    return {
+      title: 'Image Info'
+    }
+  },
+  components: {
+    ImageTable
+  }
 }
 </script>
 
 <style scoped>
-.home {
-  cursor: pointer;
-}
-.home:hover {
-  color: darkorange;
-}
 </style>
