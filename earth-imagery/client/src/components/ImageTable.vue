@@ -1,7 +1,5 @@
 <template>
-<v-layout>
-  <v-flex>
-   <template>
+<v-flex xl12 offset-xs3>
      <!-- TODO change to the NASA data when it's ready -->
   <v-data-table
     :headers="headers"
@@ -12,11 +10,11 @@
       <td class="text-xs-left">{{ props.item.latitude }}</td>
       <td class="text-xs-left">{{ props.item.longitude }}</td>
       <td class="text-xs-left">{{ props.item.cloud_score }}</td>
+      <!-- TODO: render the image in this one -->
+      <td class="text-xs-left">{{ props.item.image_url }}</td>
     </template>
   </v-data-table>
-</template>
-    </v-flex>
-</v-layout>
+</v-flex>
 </template>
 
 <script>
@@ -28,26 +26,30 @@ export default {
         { text: 'Date', value: 'date', sortable: false },
         { text: 'Latitude', value: 'latitude', sortable: false },
         { text: 'Longitude', value: 'longitude', sortable: false },
-        { text: 'Cloud Score', value: 'cloud_score', sortable: false }
+        { text: 'Cloud Score', value: 'cloud_score', sortable: false },
+        { text: 'Image URL', value: 'image_url', sortable: false }
       ],
       earthImages: [
         {
           date: '2019-04-04',
           latitude: 1.25,
           longitude: 100.75,
-          cloud_score: 4.0
+          cloud_score: 4.0,
+          image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
         },
         {
           date: '2019-04-03',
           latitude: 1.5,
           longitude: 100.5,
-          cloud_score: 4.0
+          cloud_score: 4.0,
+          image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
         },
         {
           date: '2019-04-02',
           latitude: 1.75,
           longitude: 100.25,
-          cloud_score: 4.0
+          cloud_score: 4.0,
+          image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
         }
       ]
     }

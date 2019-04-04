@@ -1,12 +1,10 @@
 <template>
-<v-layout column>
+<v-layout>
   <v-flex>
-      <div class="pl-12 pr-12 pt-6 pb-6">
-        <div class="globe">
-          <h2>I will be an interactive globe, until there here is a cute puppy</h2>
-          <img class="placeholder" src="http://www.placepuppy.net/400/250">
-        </div>
-      </div>
+    <div class="globe">
+      <h2>I will be an interactive globe, until there here is a cute puppy</h2>
+      <img class="placeholder" src="http://www.placepuppy.net/500/500">
+    </div>
   </v-flex>
 </v-layout>
 </template>

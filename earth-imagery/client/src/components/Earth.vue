@@ -1,8 +1,8 @@
 <template>
-<v-layout column>
-  <v-flex xs6 offset-xs3>
+<v-layout>
+  <v-flex xl12 offset-xs3>
     <globe/>
-    <panel/>
+    <panel title='Location Images and Data'/>
   </v-flex>
 </v-layout>
 </template>
