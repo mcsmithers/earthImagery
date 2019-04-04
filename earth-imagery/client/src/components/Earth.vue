@@ -2,17 +2,17 @@
 <v-layout>
   <v-flex xl12 offset-xs3>
     <globe/>
-    <panel title='Location Images and Data'/>
+    <details title='Location Images and Data'/>
   </v-flex>
 </v-layout>
 </template>
 
 <script>
 import Globe from '@/components/Globe'
-import Panel from '@/components/Panel'
+import Details from '@/components/Details'
 export default {
   components: {
-    Panel,
+    Details,
     Globe
   }
 }

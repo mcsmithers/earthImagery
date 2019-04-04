@@ -1,12 +1,7 @@
 <template>
 <v-layout column>
   <v-flex xs6 offset-xs3>
-    <div class="white elevation-2">
-      <v-toolbar flat dense class="cyan" dark>
-        <v-toolbar-title>Register</v-toolbar-title>
-      </v-toolbar>
-      <div class="pl-4 pr-4 pb-2 register">
-        <form name="earth-imagery-form" autocomplete="off">
+   <panel title='Register'>
           <v-flex xs12 sm6 md3>
             <v-text-field
               placeholder="Email"
@@ -17,24 +12,23 @@
           <v-flex xs12 sm6 md3>
             <v-text-field
               v-model="password"
-              type="password"
               placeholder="Password"
+              type="password"
               autocomplete="new-password"
             ></v-text-field>
           </v-flex>
-          </form>
-          <br>
-          <div v-html="error" class="error" />
-          <br>
-          <v-btn flat dark class="cyan" v-on:click="register">Register!</v-btn>
-      </div>
-    </div>
+        <br>
+        <div v-html="error" class="error" />
+        <br>
+        <v-btn flat dark class="cyan" v-on:click="register">Register</v-btn>
+      </panel>
   </v-flex>
 </v-layout>
 </template>
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
+import Panel from '@/components/Panel'
 
 export default {
   name: 'Register',
@@ -58,6 +52,9 @@ export default {
         this.error = error.response.data.error
       }
     }
+  },
+  components: {
+    Panel
   }
 }
 </script>

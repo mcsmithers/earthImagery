@@ -1,24 +1,20 @@
 <template>
-  <v-flex xs12>
-    <div class="white elevation-2">
-      <v-toolbar flat dense class="cyan" dark>
-        <v-toolbar-title>{{title}}</v-toolbar-title>
-        </v-toolbar>
-      <div class="pl-12 pr-12 pt-6 pb-6">
-        <div slot="image-info">
-            <ImageTable/>
-        </div>
-      </div>
+  <div class="white elevation-2">
+    <v-toolbar flat dense class="cyan" dark>
+      <v-toolbar-title>{{title}}</v-toolbar-title>
+      <slot name="action" />
+    </v-toolbar>
+
+    <div class="pl-4 pr-4 pt-2 pb-2">
+      <slot>
+        No slot content defined.
+      </slot>
     </div>
-  </v-flex>
+  </div>
 </template>
 
 <script>
-import ImageTable from '@/components/ImageTable'
 export default {
-  components: {
-    ImageTable
-  },
   props: [
     'title'
   ]

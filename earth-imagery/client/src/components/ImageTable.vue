@@ -1,5 +1,4 @@
 <template>
-<v-flex xl12 offset-xs3>
      <!-- TODO change to the NASA data when it's ready -->
   <v-data-table
     :headers="headers"
@@ -14,7 +13,6 @@
       <td class="text-xs-left">{{ props.item.image_url }}</td>
     </template>
   </v-data-table>
-</v-flex>
 </template>
 
 <script>

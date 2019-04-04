@@ -1,12 +1,7 @@
 <template>
 <v-layout column>
   <v-flex xs6 offset-xs3>
-    <div class="white elevation-2">
-      <v-toolbar flat dense class="cyan" dark>
-        <v-toolbar-title>Login</v-toolbar-title>
-      </v-toolbar>
-      <div class="pl-4 pr-4 pb-2 Login">
-        <form name="earth-imagery-form" autocomplete="off">
+      <panel title='Login'>
           <v-flex xs12 sm6 md3>
             <v-text-field
               placeholder="Email"
@@ -22,18 +17,17 @@
               autocomplete="new-password"
             ></v-text-field>
           </v-flex>
-        </form>
         <br>
         <div v-html="error" class="error" />
         <br>
         <v-btn flat dark class="cyan" v-on:click="login">Login</v-btn>
-      </div>
-    </div>
+      </panel>
   </v-flex>
 </v-layout>
 </template>
 
 <script>
+import Panel from '@/components/Panel'
 import AuthenticationService from '../services/AuthenticationService'
 
 export default {
@@ -58,6 +52,9 @@ export default {
         this.error = error.response.data.error
       }
     }
+  },
+  components: {
+    Panel
   }
 }
 </script>
