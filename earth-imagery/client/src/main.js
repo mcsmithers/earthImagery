@@ -7,11 +7,19 @@ import Vuetify from 'vuetify'
 import { sync } from 'vuex-router-sync'
 import 'vuetify/dist/vuetify.min.css'
 import store from '@/store/store'
-// require('dotenv').config()
+import * as VueGoogleMaps from 'vue2-google-maps'
+require('dotenv').config()
 
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: process.env.GOOGLE_KEY,
+    libraries: 'places' // necessary for places input
+  }
+})
 
 sync(store, router)
 

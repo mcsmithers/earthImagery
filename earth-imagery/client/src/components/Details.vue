@@ -4,11 +4,9 @@
       <v-toolbar flat dense class="cyan" dark>
         <v-toolbar-title>{{title}}</v-toolbar-title>
         </v-toolbar>
-      <div class="pl-12 pr-12 pt-6 pb-6">
         <div slot="image-info">
             <ImageTable/>
         </div>
-      </div>
     </div>
   </v-flex>
 </template>

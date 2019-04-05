@@ -1,27 +1,27 @@
 <template>
 <v-layout column>
   <v-flex xs6 offset-xs3>
-      <panel title='Login'>
-          <v-flex xs12 sm6 md3>
-            <v-text-field
-              placeholder="Email"
-              v-model="email"
-            ></v-text-field>
-          </v-flex>
-          <br/>
-          <v-flex xs12 sm6 md3>
-            <v-text-field
-              v-model="password"
-              placeholder="Password"
-              type="password"
-              autocomplete="new-password"
-            ></v-text-field>
-          </v-flex>
-        <br>
-        <div v-html="error" class="error" />
-        <br>
-        <v-btn flat dark class="cyan" v-on:click="login">Login</v-btn>
-      </panel>
+    <panel title='Login'>
+      <v-flex xs12 sm6 md3>
+        <v-text-field
+          placeholder="Email"
+          v-model="email"
+        ></v-text-field>
+      </v-flex>
+      <br/>
+      <v-flex xs12 sm6 md3>
+        <v-text-field
+          v-model="password"
+          placeholder="Password"
+          type="password"
+          autocomplete="new-password"
+        ></v-text-field>
+      </v-flex>
+      <br>
+      <div v-html="error" class="error" />
+      <br>
+      <v-btn flat dark class="cyan" v-on:click="login">Login</v-btn>
+    </panel>
   </v-flex>
 </v-layout>
 </template>

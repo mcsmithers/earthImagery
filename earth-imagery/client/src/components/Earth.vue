@@ -1,8 +1,8 @@
 <template>
 <v-layout>
-  <v-flex xl12 offset-xs3>
+  <v-flex>
     <globe/>
-    <details title='Location Images and Data'/>
+    <Details title='Location Images and Data'/>
   </v-flex>
 </v-layout>
 </template>
