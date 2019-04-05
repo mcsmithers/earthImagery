@@ -27,30 +27,40 @@ export default {
         { text: 'Cloud Score', value: 'cloud_score', sortable: false },
         { text: 'Image URL', value: 'image_url', sortable: false }
       ],
-      earthImages: [
-        {
-          date: '2019-04-04',
-          latitude: 1.25,
-          longitude: 100.75,
-          cloud_score: 4.0,
-          image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
-        },
-        {
-          date: '2019-04-03',
-          latitude: 1.5,
-          longitude: 100.5,
-          cloud_score: 4.0,
-          image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
-        },
-        {
-          date: '2019-04-02',
-          latitude: 1.75,
-          longitude: 100.25,
-          cloud_score: 4.0,
-          image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
-        }
-      ]
+      // earthImages: [
+      //   {
+      //     date: '2019-04-04',
+      //     latitude: 1.25,
+      //     longitude: 100.75,
+      //     cloud_score: 4.0,
+      //     image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
+      //   },
+      //   {
+      //     date: '2019-04-03',
+      //     latitude: 1.5,
+      //     longitude: 100.5,
+      //     cloud_score: 4.0,
+      //     image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
+      //   },
+      //   {
+      //     date: '2019-04-02',
+      //     latitude: 1.75,
+      //     longitude: 100.25,
+      //     cloud_score: 4.0,
+      //     image_url: 'https://earthengine.googleapis.com/api/thumb?thumbid=9081d44f6984d0e4791922804beb54a4&token=ffc46da9fbe067bf62fb0af83ed5ce92'
+      //   }
+      // ]
+      earthImages: [{
+        date: null,
+        latitude: null,
+        longitude: null,
+        cloud_score: null,
+        image_url: null
+      }]
     }
+  },
+  mounted () {
+    // make request to backend for NASA data
   }
 }
 </script>

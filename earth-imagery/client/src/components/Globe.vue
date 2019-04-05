@@ -2,8 +2,6 @@
 <v-layout>
   <v-flex xl12>
     <div class="globe">
-      <!-- <h2>I will be an interactive globe, until there here is a cute puppy</h2> -->
-      <!-- <img class="placeholder" src="http://www.placepuppy.net/500/500"> -->
       <h2>Search and place a pin to see some land satellite pictures</h2>
       <label>
         <gmap-autocomplete
